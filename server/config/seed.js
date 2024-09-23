@@ -15,14 +15,24 @@ db.once("open", async () => {
 
     const products = await Product.insertMany([
         {
-        name: '8x10',
+        name: '8x10 Print - Gloss',
         description:
-            'Treat your kitty to a whisker-licking flavor with BLUE Tastefuls Adult Cat Ocean Fish and Tuna Entrée Pate wet cat food.',
+            'Semi Gloss paper produces lifelike color and realistic saturation with the finish of a traditional photo print.',
         image: 'acorn_woodpecker.jpeg',
         category: categories[0]._id,
         price: 25,
         quantity: 500
-        }
+        },
+
+        {
+            name: '8x10 Print - Matte',
+            description:
+                'Deep Matte paper is lustreless, featuring a silky smooth surface with rich colors and pure whites.',
+            image: 'acorn_woodpecker.jpeg',
+            category: categories[0]._id,
+            price: 25,
+            quantity: 500
+            }
     ]);
 
   console.log("products seeded");
